@@ -1,7 +1,6 @@
 body {
   background-image: url(http://thefw.com/files/2012/12/tumblr_mdee7qxvAn1qmyyhko1_500.gif);  
   color: white;
-  display: flex;
   font-family: helvetica;
   text-align: center;
 }
@@ -28,14 +27,15 @@ h1{
   text-align: center;
 }
 
-
-
-#album_box{
-
+p{
+  font-family: helvetica;
+  font-size: 10px; 
 }
 
 #albums{
+  display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  position: relative;
+  justify-content: center;
+  align-items: center;
+  align-content: center
 }

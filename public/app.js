@@ -23,12 +23,12 @@ var app = function(){
 
 
 var populateList = function(musicArray){
-  var albumsDiv = document.querySelector("#albums");
+  var albums = document.querySelector("#albums");
     musicArray.forEach(function(album){
 
     var albumBox = document.createElement("div")
     albumBox.id = "album_box"
-    albumsDiv.appendChild(albumBox);
+    albums.appendChild(albumBox);
 
 
 
