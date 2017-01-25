@@ -1,7 +1,9 @@
 body {
-  background-image: url(http://www.wallpapershdin.com/walls/landscapes-nature-winter-snow-trees-pine-branches-wide.jpg);
-  position: no-repeat;  
+  background-image: url(http://thefw.com/files/2012/12/tumblr_mdee7qxvAn1qmyyhko1_500.gif);  
   color: white;
+  display: flex;
+  font-family: helvetica;
+  text-align: center;
 }
 
 main{
@@ -21,3 +23,19 @@ input{
   padding: 5px;
 }
 
+h1{
+  font-family: helvetica;
+  text-align: center;
+}
+
+
+
+#album_box{
+
+}
+
+#albums{
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+}

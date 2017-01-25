@@ -7,26 +7,46 @@ var makeRequest = function(url, callback){
   request.send();
 };
 
-var populateList = function(music) {
-var fill = document.querySelector('#albums')
-  music.albums.items.forEach(function(album) {
-    var li = document.createElement("li");
-    li.innerText = album.name;
-    fill.appendChild(li)
-
-  })
-}
-
 var requestComplete = function() {
   if (this.status !== 200) return;
   var jsonString = this.responseText;
   music = JSON.parse(jsonString);
-  populateList(music);
+  var musicArray = music.albums.items;
+    populateList(musicArray);
+  // populateList(music);
 }
 
 var app = function(){
-  var url = "https://api.spotify.com/v1/search?q=pop&type=album";
+  var url = "https://api.spotify.com/v1/search?q=christmas&type=album";
   makeRequest(url, requestComplete);
 }
+
+
+var populateList = function(musicArray){
+  var albumsDiv = document.querySelector("#albums");
+    musicArray.forEach(function(album){
+
+    var albumBox = document.createElement("div")
+    albumBox.id = "album_box"
+    albumsDiv.appendChild(albumBox);
+
+
+
+    var title = document.createElement("p");
+    title.innerText = album.name + "\n";
+    albumBox.appendChild(title);
+
+    var image = document.createElement("img");
+    image.src = album.images[0].url + "\n";
+    image.width = 200;
+    title.appendChild(image);
+
+    var link = document.createElement("a");
+    link.innerText = "Listen";
+    link.href = album.external_urls.spotify;
+    title.appendChild(link);
+
+  })
+  }
 
 window.onload = app;
