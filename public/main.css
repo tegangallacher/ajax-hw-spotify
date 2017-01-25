@@ -1,0 +1,23 @@
+body {
+  background-image: url(http://www.wallpapershdin.com/walls/landscapes-nature-winter-snow-trees-pine-branches-wide.jpg);
+  position: no-repeat;  
+  color: white;
+}
+
+main{
+  width: 300px;
+  margin: 0 auto;
+}
+
+input{
+  padding: 10px;
+  border-radius: 5px;
+  width: 400px;
+  font-size: 22px;
+  margin: 10px;
+}
+
+.album{
+  padding: 5px;
+}
+
